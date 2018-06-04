@@ -2,6 +2,10 @@ from collections import namedtuple
 
 Phoneme = namedtuple('Phoneme', 'kbd ipa arpa hangul is_vowel final_allowed is_double')
 
+                       # kbd ipa arp hangl vowel  final double
+null_vowel =     Phoneme('', '', '', 'ㅡ', True,  None, None)
+null_consonant = Phoneme('', '', '', 'ㅇ', False, None, None)
+
 by_kbd = {
     ## CONSONANTS
                # kbd  ipa arp hangl vowel final   double
