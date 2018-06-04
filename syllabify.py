@@ -17,6 +17,7 @@ SEPARATOR = '[SEP]'
 # final_allowed
 # is_double
 
+
 class Syllable:
     def __init__(self, vowel, prev, next):
         self.vowel = vowel
@@ -30,28 +31,31 @@ class Syllable:
         self.coda = None
 
 def syllabify(tokens):
-    syllables = _find_nuclei(tokens)
+    if any([t.is_vowel for t in tokens]):
+        syllables = _find_nuclei(tokens)
 
-    # each vowel pulls one pre- consonant if possible, limited by:
-    #     availability
-    for s in syllables:
-        if s.prev:
-            s.onset = s.prev.pop()
+        # each vowel pulls one pre- consonant if possible, limited by:
+        #     availability
+        for s in syllables:
+            if s.prev:
+                s.onset = s.prev.pop()
 
-    # each vowel pulls one post- consonant if possible, limited by:
-    #     availability
-    #     legality for final position
-    for s in syllables:
-        if s.next and s.next[0].final_allowed:
-            s.coda = s.next.pop(0)
+        # each vowel pulls one post- consonant if possible, limited by:
+        #     availability
+        #     legality for final position
+        for s in syllables:
+            if s.next and s.next[0].final_allowed:
+                s.coda = s.next.pop(0)
 
-    # each vowel pulls one more post- consonant if possible, limited by:
-    #     availability
-    #     if the previous post- consonant was a double, this is not allowed
-    #     legality for second final position, dependent on first final
-    # ptodo implement second finals
+        # each vowel pulls one more post- consonant if possible, limited by:
+        #     availability
+        #     if the previous post- consonant was a double, this is not allowed
+        #     legality for second final position, dependent on first final
+        # ptodo implement second finals
 
-    syllables = _handle_remaining_consonants(syllables)
+        syllables = _handle_remaining_consonants(syllables)
+    else:
+        syllables = _syllabify_consonant_cluster(tokens)
 
     _add_placeholders(syllables)
 
@@ -90,14 +94,15 @@ def _handle_remaining_consonants(syllables):
     return ret
 
 def _syllabify_consonant_cluster(tokens):
-    # ptodo implement this properly:
-    # - you can have multiple consonants in a cluster
-    #   - but once you do that, you'll also need to make sure finals are legal
+    # Greedy implementation
     ret = []
     for t in tokens:
-        s = Syllable(None, [], [])
-        s.onset = t
-        ret.append(s)
+        if ret and not (ret[-1].coda) and t.final_allowed:
+            ret[-1].coda = t
+        else:
+            s = Syllable(None, [], [])
+            s.onset = t
+            ret.append(s)
     return ret
 
 def _find_nuclei(tokens):  # => Nucleus[]

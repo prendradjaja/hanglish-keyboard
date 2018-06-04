@@ -4,7 +4,7 @@ Phoneme = namedtuple('Phoneme', 'kbd ipa arpa hangul is_vowel final_allowed is_d
 
                        # kbd ipa arp hangl vowel  final double
 null_vowel =     Phoneme('', '', '', 'ㅡ', True,  None, None)
-null_consonant = Phoneme('', '', '', 'ㅇ', False, None, None)
+null_consonant = Phoneme('', '', '', 'ㅇ', False, True, False)
 
 by_kbd = {
     ## CONSONANTS
