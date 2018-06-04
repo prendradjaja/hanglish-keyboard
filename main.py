@@ -1,10 +1,19 @@
 from typing_display import TypingDisplay
-from syllabify import syllabify
 from tokenize import tokenize
 from encode import encode
 
 
-class HanglishKeyboard:
+class HanglishKeyboard(TypingDisplay):
     def translate(self, s):
         words = s.split()
-        return ' '.join(encode(w) for w in words)
+        ret = ''
+        for w in words:
+            try:
+                tokens = tokenize(w)
+                hangul = encode(tokens)
+            except:
+                hangul = w
+            ret += hangul + ' '
+        return ret
+
+HanglishKeyboard().start()

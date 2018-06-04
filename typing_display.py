@@ -29,8 +29,11 @@ class TypingDisplay:
             exit()
         elif c == '\x15':  # ctrl-u
             s = ''
+        elif c == '\x13':  # ctrl-u
+            with open('temp_out', 'w') as f:
+                f.write(self.translate(s))
         else:
             s += c
         return s
 
-TypingDisplay().start()
+# TypingDisplay().start()

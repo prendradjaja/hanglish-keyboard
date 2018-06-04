@@ -1,4 +1,4 @@
-import syllabify
+import encode
 import phoneme_info
 import pytest
 
@@ -12,7 +12,7 @@ def test__find_nuclei(tokens, expected):
     tokens = tokens.split()
     tokens = [phoneme_info.by_kbd[t] for t in tokens]
 
-    actual = syllabify._find_nuclei(tokens)
+    actual = encode._find_nuclei(tokens)
     actual = [display_syllable(n) for n in actual]
     assert actual == expected
 
@@ -32,7 +32,7 @@ def test__to_sublists(tokens, expected):
     tokens = tokens.split()
     tokens = [phoneme_info.by_kbd[t] for t in tokens]
 
-    actual = syllabify._to_sublists(tokens)
+    actual = encode._to_sublists(tokens)
     actual = [[t.kbd for t in sublist] for sublist in actual]
     assert actual == expected
 
@@ -44,7 +44,7 @@ def test__add_separators(tokens, expected):
     tokens = tokens.split()
     tokens = [phoneme_info.by_kbd[t] for t in tokens]
 
-    actual = syllabify._add_separators(tokens)
-    actual = [t.kbd if t != syllabify.SEPARATOR else '/' for t in actual]
+    actual = encode._add_separators(tokens)
+    actual = [t.kbd if t != encode.SEPARATOR else '/' for t in actual]
     actual = ' '.join(actual)
     assert actual == expected

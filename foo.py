@@ -1,6 +1,7 @@
-from syllabify import syllabify
+from encode import encode
 from tokenize import tokenize
 import hgtk
 
-# print(syllabify(tokenize('spaiiz')))
-print(syllabify(tokenize('sSBpsps')))
+# print(encode(tokenize('spaiiz')))
+# print(encode(tokenize('sSBpsps')))
+print(encode(tokenize('a')))

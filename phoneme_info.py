@@ -40,6 +40,7 @@ by_kbd = {
     'u':  Phoneme('u',  '', '', 'ㅜ', True, None, None),
     'A':  Phoneme('A',  '', '', 'ㅑ', True, None, None),
     'ai': Phoneme('ai', '', '', 'ㅐ', True, None, None),
+    # ptodo or should i use Ai?
     'au': Phoneme('au', '', '', 'ㅒ', True, None, None),
     'E':  Phoneme('E',  '', '', 'ㅕ', True, None, None),
     'ei': Phoneme('ei', '', '', 'ㅔ', True, None, None),
@@ -56,6 +57,11 @@ by_kbd = {
     'Ei':  Phoneme('Ei',  '', '', 'ㅖ', True, None, None),
     'I':   Phoneme('I',   '', '', 'ㅢ', True, None, None),
 }
+
+# aliases
+by_kbd['r'] = by_kbd['G']
+by_kbd['f'] = by_kbd['B']
+by_kbd['y'] = by_kbd['J']
 
 # these don't need to be specially-encoded
 # oaO	ㅘㅛ
