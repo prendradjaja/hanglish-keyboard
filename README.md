@@ -78,10 +78,10 @@ We've seen three syllable structures so far. There are a handful more. You can l
     CV
     CC
 
-(This last structure has some more rules to it in both Hangul and Hanglish.)
-
 # Example text
 
-While there are a handful more concepts I haven't explained, this should give you a flavor for how Hangul works (and a bit of how Hanglish differs from it).
+Hopefully this gives you a taste of how Hanglish works (and of its differences from Hangul)!
 
 TODO example text
+
+TODO there's more to learn, link doc
