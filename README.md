@@ -2,15 +2,23 @@ TODO intro
 
 ## First words
 
-Unlike English, Korean is written in syllables. But unlike Japanese hiragana and katakana, each character in Korean's syllabary (Hangul) is composed of smaller parts (jamo), each corresponding to individual sounds (consonants and vowels).
-
-For an example, let's take the word "happy."
+Let's take the word "mixer."
 
 First, write it phonetically:
 
-> hæpi
+> mɪksəɹ
 
-The Hanglish jamo corresponding to these sounds are:
+The Hanglish "letters" (jamo) corresponding to these sounds are, in order:
 
-    h  æ  p  i
-    ㅎ ㅏ ㅍ ㅣ
+> ㅁㅣㅋㅅㅓㄲ
+
+However, Hanglish (like Korean) is written in syllables. So let's combine these jamo together in this structure:
+
+    (C = consonant, V = vowel)
+
+    C V
+     C
+
+So the first syllable ("mik") is:
+
+# 밐
