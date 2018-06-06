@@ -62,9 +62,9 @@ The /sp/ part is the interesting bit. Combining ㅅ and ㅍ with our placeholder
 
 ## ㅅ+ㅡ+ㅍ = 슾
 
-So the whole word is 슾맅.
+So the whole word is 슾맅: two characters for one syllable.
 
-This is worth pointing out: In Korean, each character corresponds to a syllable. However, since English has lots of consonant clusters that aren't possible in Korean, we need to do tricks like this (creating a placeholder vowel, splitting a syllable into multiple characters), which make Hanglish markedly different from Hangul.
+This is significant: In Korean, each character corresponds to a syllable. However, since English has lots of consonant clusters that aren't possible in Korean, we need to do tricks like this (creating a placeholder vowel, splitting a syllable into multiple characters), which make Hanglish markedly different from Hangul.
 
 # More syllable structures
 
