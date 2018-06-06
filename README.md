@@ -10,7 +10,9 @@ First, write it phonetically:
 
 > mɪksəɹ
 
-The Hanglish "letters" (jamo) corresponding to these sounds are, in order: (Note: While many Hanglish sounds do correspond, at least roughly, to their real sounds in Korean, many are completely different. ㄲ is one of these: In Hanglish, it corresponds to /ɹ/, a.k.a. the "r" sound. In Korean, it's a completely different sound: /k/ with [fortis](https://en.wikipedia.org/wiki/Fortis_and_lenis).)
+The Hanglish "letters" (jamo) corresponding to these sounds are, in order:
+
+(Note: While many Hanglish sounds do correspond, at least roughly, to their real sounds in Korean, many are completely different. ㄲ is one of these: In Hanglish, it corresponds to /ɹ/, a.k.a. the "r" sound. In Korean, it's a completely different sound: /k/ with [fortis](https://en.wikipedia.org/wiki/Fortis_and_lenis).)
 
 > ㅁㅣㅋㅅㅓㄲ
 
